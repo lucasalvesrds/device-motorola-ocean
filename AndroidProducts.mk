@@ -15,9 +15,15 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_ocean.mk
+    $(LOCAL_DIR)/legion_ocean.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_ocean-eng \
-    aosp_ocean-user \
-    aosp_ocean-userdebug
+    legion_ocean-eng \
+    legion_ocean-user \
+    legion_ocean-userdebugPRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/legion_ocean.mk
+
+COMMON_LUNCH_CHOICES := \
+    legion_ocean-eng \
+    legion_ocean-user \
+    legion_ocean-userdebug
