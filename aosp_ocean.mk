@@ -19,10 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common PE stuff
+# Inherit some common Kraken stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
+#CUSTOM_BUILD_TYPE := OFFICIAL
+CUSTOM_MAINTAINER := Lucas Alves 
+TARGET_ENABLE_ADB := true
 
 # Inherit from ocean device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -38,4 +40,5 @@ PRODUCT_NAME := aosp_ocean
 PRODUCT_MODEL := moto g(7) power
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=ocean 
+        PRODUCT_NAME=ocean \
+        PRIVATE_BUILD_DESC="ocean-user 9 PPO29.114-134 fee207 release-keys"
